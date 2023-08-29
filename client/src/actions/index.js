@@ -1,4 +1,9 @@
-import { GET_LOG_IN_DETAILS, HANDLE_EDIT,HANDLE_DELETE,HANDLE_MARKAS_COMPLETE } from "../types"
+import { 
+    GET_LOG_IN_DETAILS, 
+    HANDLE_EDIT,
+    HANDLE_DELETE,
+    HANDLE_MARKAS_COMPLETE, 
+    GET_TASK_LIST } from "../types"
 
 export const saveLogInDetails = ( data) => {
     return {
@@ -24,6 +29,12 @@ export const handleDelete = (data) => {
 export const handleMarkAsComplete = (data) => {
     return {
         type: HANDLE_MARKAS_COMPLETE,
+        data
+    }
+}
+export const getTaskList = data => {
+    return {
+        type: GET_TASK_LIST,
         data
     }
 }

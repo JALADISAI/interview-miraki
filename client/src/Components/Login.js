@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getUserInfo } from "../apis";
 import { getCookie, setCookie } from "../helpers";
 import { saveLogInDetails } from "../actions";
+import TaskList from "./tasks/List";
 
 function LogIn () {
     const [name,setName] = useState('');
@@ -49,7 +50,7 @@ function LogIn () {
                   <button onClick={saveDetails} disabled={isValid} >Create/Login</button>
                   
               </div>}
-             {isLogin &&<Home/>}
+             {isLogin &&<TaskList/>}
           </div>
     )
 }

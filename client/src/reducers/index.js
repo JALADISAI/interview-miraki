@@ -1,6 +1,8 @@
 import { combineReducers } from "@reduxjs/toolkit";
-import xyz from "./logInDetails.reducers";
+import logInDetails from "./logInDetails.reducers";
+import taskList from './taskList.reducer'
 
 export default combineReducers({
-    logInDetails: xyz
+    logInDetails,
+    taskList
 })
