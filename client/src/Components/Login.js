@@ -34,6 +34,7 @@ function LogIn () {
     useEffect(() => {
         const data = getCookie();
         dispatch(saveLogInDetails(data))
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     return (
         <div>
