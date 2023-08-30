@@ -24,9 +24,9 @@ export const getTaskById = async (id) => {
     return data
 }
 
-export const updateTaskById = async (id, body) => {
-    const res = await fetch(`${BASE_URL}/task/${id}`, {
-        body,
+export const updateTaskById = async (body) => {
+    const res = await fetch(`${BASE_URL}/task/${body.id}`, {
+        body: JSON.stringify(body),
         method: `put`,
         headers: {
             "Content-Type": "application/json"
@@ -38,7 +38,7 @@ export const updateTaskById = async (id, body) => {
 
 export const createTask = async (body) => {
     const res = await fetch(`${BASE_URL}/task/add`, {
-        body,
+        body: JSON.stringify(body),
         method: `post`,
         headers: {
             "Content-Type": "application/json"

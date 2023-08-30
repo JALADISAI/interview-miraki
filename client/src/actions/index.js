@@ -2,7 +2,8 @@ import {
     GET_LOG_IN_DETAILS, 
     HANDLE_EDIT,
     GET_TASK_LIST,
-    HANDLE_ACTION_SAVE
+    HANDLE_ACTION_SAVE,
+    CREATE_TASK
 } from "../types"
 
 export const saveLogInDetails = ( data) => {
@@ -27,6 +28,13 @@ export const getTaskList = data => {
 export const saveUserAction = data => {
     return {
         type: HANDLE_ACTION_SAVE,
+        data
+    }
+}
+
+export const createTask = data => {
+    return {
+        type : CREATE_TASK,
         data
     }
 }

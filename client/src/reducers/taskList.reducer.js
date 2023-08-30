@@ -1,7 +1,9 @@
-import { GET_TASK_LIST, HANDLE_EDIT, HANDLE_ACTION_SAVE } from "../types"
+import { createTask } from "../apis"
+import { GET_TASK_LIST, HANDLE_EDIT, HANDLE_ACTION_SAVE ,CREATE_TASK} from "../types"
 
 const initialState = {
-    list: []
+    list: [],
+    createTask: false
 }
 
 export default function taskList (state =  initialState,action) {
@@ -20,6 +22,14 @@ export default function taskList (state =  initialState,action) {
             return {
                 ...state,
                 [action.data.key]: action.data.value
+            }
+        }
+
+        case CREATE_TASK: {
+            return {
+                ...state,
+                createTask:action.data
+
             }
         }
         default:

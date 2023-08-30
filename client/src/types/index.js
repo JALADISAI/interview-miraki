@@ -3,3 +3,4 @@ export const  HANDLE_EDIT = 'HANDLE_EDIT';
 
 export const GET_TASK_LIST = 'GET_TASK_LIST';
 export const HANDLE_ACTION_SAVE = 'HANDLE_ACTION_SAVE';
+export const CREATE_TASK = "CREATE_TASK";
