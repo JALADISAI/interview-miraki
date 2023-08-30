@@ -40,6 +40,7 @@ export default function TaskList() {
     const rows = useSelector(state => state.taskList?.list, []);
     useEffect(() => {
         getTasksList()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     const handleClose = () => {
       console.log('open, anchorEl', open, anchorEl);
