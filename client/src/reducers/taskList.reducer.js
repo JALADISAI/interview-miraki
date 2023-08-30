@@ -1,5 +1,4 @@
-import { createTask } from "../apis"
-import { GET_TASK_LIST, HANDLE_EDIT, HANDLE_ACTION_SAVE ,CREATE_TASK} from "../types"
+import { CREATE_TASK, GET_TASK_LIST, HANDLE_ACTION_SAVE, HANDLE_EDIT } from "../types"
 
 const initialState = {
     list: [],
