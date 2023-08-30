@@ -1,5 +1,4 @@
 import React,{useEffect, useState}from "react";
-import Home from "../Components/Home";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserInfo } from "../apis";
 import { getCookie, setCookie } from "../helpers";
