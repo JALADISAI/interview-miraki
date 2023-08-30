@@ -29,7 +29,7 @@ export default function TaskList() {
         dispatch(getTaskList(data))
     }
     const deleteTask = async (data) => {
-      const result = await delTaskById (data)
+      await delTaskById (data)
       getTasksList();
     }
 
@@ -37,15 +37,12 @@ export default function TaskList() {
       await updateTaskById (data)
       getTasksList()
     }
+    const rows = useSelector(state => state.taskList?.list, []);
     useEffect(() => {
         getTasksList()
     }, [])
-    const rows = useSelector(state => state.taskList?.list, []);
-    const handleClick= (e) => {
-      setOpen(true);
-      setAnchorEl(e.currentTarget)
-    } 
     const handleClose = () => {
+      console.log('open, anchorEl', open, anchorEl);
       setOpen(false);
       setAnchorEl(null)
     }
